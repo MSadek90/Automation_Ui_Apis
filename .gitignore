@@ -1,0 +1,20 @@
+
+
+#Ignore vscode AI rules
+.github\instructions\codacy.instructions.md
+
+# Ignore .env files
+.env
+# Ignore log files
+*.log
+# ignore .idea folder
+.idea/
+# ignore .vscode folder
+.vscode/
+# ignore .mvn folder
+.mvn/
+#ignore target folder
+target/
+
+#ignore github folder
+.github/
