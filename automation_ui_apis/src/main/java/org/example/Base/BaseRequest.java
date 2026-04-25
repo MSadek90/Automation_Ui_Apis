@@ -4,7 +4,9 @@ package org.example.Base;
 
 
 
-import org.example.Utilities.ConfigReader;
+import org.example.utilities.ConfigReader;
+
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.specification.RequestSpecification;
@@ -16,7 +18,7 @@ public abstract class BaseRequest {
     protected RequestSpecBuilder getCommonSpec(){
        return new RequestSpecBuilder()
         .setBaseUri(ConfigReader.readValueFromConfigFile(".env", "BaseUrl"))
-        .addHeader("Content_Type", "application/json")
+        .addHeader("Content-Type", "application/json")
         .log(LogDetail.ALL);
     }
 

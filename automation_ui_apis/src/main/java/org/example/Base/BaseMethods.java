@@ -5,42 +5,60 @@ import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.given;
 
+import io.qameta.allure.restassured.AllureRestAssured;
+
 public abstract class BaseMethods extends BaseRequest{
 
-    public Response post(RequestSpecification requestSpecification, String endPoint, Object body){
+    public Response postRequest(RequestSpecification requestSpecification, String endPoint, Object body){
         return 
          given()
+         .filter(new AllureRestAssured())
         .spec(requestSpecification)
         .body(body)
         .when()
-        .post(endPoint);
+        .post(endPoint)
+        .then()
+        .log().body()
+        .extract().response();
     };
 
 
-    public Response get(RequestSpecification requestSpecification, String endpoint){
+    public Response getRequest(RequestSpecification requestSpecification, String endpoint){
        return
         given()
+        .filter(new AllureRestAssured())
         .spec(requestSpecification)
         .when()
-        .get(endpoint);
+        .get(endpoint)
+        .then()
+        .log().body()
+        .extract().response();
     };
 
 
-    public Response patch(RequestSpecification requestSpecification, String endpoint){
+    public Response patchRequest(RequestSpecification requestSpecification, String endpoint){
        return
         given()
+        .filter(new AllureRestAssured())
         .spec(requestSpecification)
         .when()
-        .patch(endpoint);
+        .patch(endpoint)
+        .then()
+        .log().body()
+        .extract().response();
     };
 
 
-    public Response delete(RequestSpecification requestSpecification, String endpoint){
+    public Response deleteRequest(RequestSpecification requestSpecification, String endpoint){
        return
         given()
+        .filter(new AllureRestAssured())
         .spec(requestSpecification)
         .when()
-        .delete(endpoint);
+        .delete(endpoint)
+        .then()
+        .log().body()
+        .extract().response();
     };
 
     

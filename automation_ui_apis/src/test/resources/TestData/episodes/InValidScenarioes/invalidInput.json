@@ -1,0 +1,54 @@
+[
+    {
+        "scenarioName": "Empty Arabic Title",
+        "expectedStatusCode": 422,
+        "payload": {
+            "apple_podcast_url": "https://podcasts.apple.com/us/podcast/tech-talks/id123456789",
+            "content": {
+                "en": "<p>In this episode, we discuss the future of AI and its impact on software engineering.</p>",
+                "ar": "<p>في هذه الحلقة، نناقش مستقبل الذكاء الاصطناعي وتأثيره على هندسة البرمجيات.</p>"
+            },
+            "date": "2025-12-22",
+            "description": {
+                "en": "A deep dive into AI trends for the upcoming year.",
+                "ar": "نظرة متعمقة على اتجاهات الذكاء الاصطناعي للعام القادم."
+            },
+            "duration": 45,
+            "episode_number": 8,
+            "image": "12ecaa0b-6f63-4056-b640-90bb207e4804",
+            "soundcloud_url": "https://soundcloud.com/tech-talks/episode-8",
+            "status": 4,
+            "title": {
+                "en": "The Future of AI",
+                "ar": ""
+            },
+            "youtube_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+    },
+    {
+        "scenarioName": "Negative Duration",
+        "expectedStatusCode": 422,
+        "payload": {
+            "apple_podcast_url": "https://podcasts.apple.com/us/podcast/tech-talks/id987654321",
+            "content": {
+                "en": "<p>Exploring the world of cloud computing and serverless architectures.</p>",
+                "ar": "<p>استكشاف عالم الحوسبة السحابية والبنيات الخالية من الخوادم.</p>"
+            },
+            "date": "2025-12-29",
+            "description": {
+                "en": "Everything you need to know about Serverless.",
+                "ar": "كل ما تحتاج معرفته عن تقنية الخوادم السحابية."
+            },
+            "duration": -5,
+            "episode_number": 9,
+            "image": "a1b2c3d4-e5f6-7890-1234-56789abcdef0",
+            "soundcloud_url": "https://soundcloud.com/tech-talks/episode-9",
+            "status": 4,
+            "title": {
+                "en": "Serverless Architecture",
+                "ar": "البنية التحتية بدون خوادم"
+            },
+            "youtube_url": "https://www.youtube.com/watch?v=xyz123abc"
+        }
+    }
+]

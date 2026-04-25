@@ -1,0 +1,55 @@
+[
+
+  {
+  "payload":{
+  "apple_podcast_url": "https://podcasts.apple.com/us/new",
+  "content": {
+    "en": "test content</p>",
+    "ar": "تيست كونتنت"
+  },
+  "date": "2027-12-22",
+  "description": {
+    "en": "test description",
+    "ar": "تيست وصف<"
+  },
+  "duration": 14,
+  "episode_number": 8,
+  "image": "12ecaa0b-6f63-4056-b640-90bb207e4804",
+  "soundcloud_url": "https://soundcloud.com/",
+  "status": 4,
+  "title": {
+    "en": "episode 8",
+    "ar": "الحلقة التامنه"
+  },
+  "youtube_url": "https://www.youtube.com/"
+}
+
+  },
+
+  {
+    "payload":{
+  "apple_podcast_url": "https://podcasts.apple.com/us/new",
+  "content": {
+    "en": "test content</p>",
+    "ar": "تيست كونتنت"
+  },
+  "date": "2027-12-22",
+  "description": {
+    "en": "test description",
+    "ar": "تيست وصف<"
+  },
+  "duration": 14,
+  "episode_number": 8,
+  "image": "12ecaa0b-6f63-4056-b640-90bb207e4804",
+  "soundcloud_url": "https://soundcloud.com/",
+  "status": 4,
+  "title": {
+    "en": "episode 8",
+    "ar": "الحلقة التامنه"
+  }
+}
+  }
+
+
+]
+

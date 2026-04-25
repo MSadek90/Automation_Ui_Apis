@@ -1,15 +1,15 @@
-package org.example.Factory;
+package org.example.factory;
 
 import org.example.AuthTypes.ApiKey;
 import org.example.AuthTypes.BasicAuth;
 import org.example.AuthTypes.BearerAuth;
 import org.example.Base.BaseAuth;
-import org.example.Enums.AuthType;
-import org.example.Utilities.ConfigReader;
+import org.example.enums.AuthType;
+import org.example.utilities.ConfigReader;
 
 public class AuthFactory {
 
-    public BaseAuth selectAuth(AuthType auth){
+    public static BaseAuth selectAuth(AuthType auth){
 
         switch (auth) {
             case BEARER:
