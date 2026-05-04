@@ -9,18 +9,15 @@ import org.example.utilities.ConfigReader;
 
 public class AuthFactory {
 
-    public static BaseAuth selectAuth(AuthType auth){
+    public static BaseAuth selectAuth(AuthType auth, String token){
 
         switch (auth) {
             case BEARER:
-                return new BearerAuth(ConfigReader.readValueFromConfigFile(".env", "AdminToken"));
-           
+                return new BearerAuth(ConfigReader.readValueFromConfigFile(".env", token));
             case BASIC:
                 return new BasicAuth("null","null");
-
             case API_KEY:
                 return new ApiKey();
-        
             default:
                 throw new IllegalArgumentException("this: " + auth + " :type of auth not found");
         }        

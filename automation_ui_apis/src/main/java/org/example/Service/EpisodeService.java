@@ -10,9 +10,9 @@ import io.restassured.response.Response;
 
 
 public class EpisodeService extends BaseMethods {
-    public Response createEpisode(Object Body){
+    public Response createEpisode(Object Body, String token){
 
-        return postRequest(setRequest(AuthFactory.selectAuth(AuthType.BEARER)),Endpoints.EPISODES,Body);
+        return postRequest(setRequest(AuthFactory.selectAuth(AuthType.BEARER, token)),Endpoints.EPISODES,Body);
 
     }
 }

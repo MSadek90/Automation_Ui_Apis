@@ -1,8 +1,10 @@
 package org.example.payload.episodes;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Data
+@ToString(of = {"apple_podcast_url","date"})
 public class episodePayload {
 
         private String apple_podcast_url;
